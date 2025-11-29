@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management - Admin</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">Fleet Manager</div>
+            <div class="filters">
+                <label>
+                    Category
+                    <select id="filterCategory">
+                        <option value="all">All</option>
+                        <option value="all">Auto</option>
+                        <option value="all">Car</option>
+                        <option value="all">Truck</option>
+                        <option value="all">Bus</option>
+                    </select>
+                </label>
+
+                <label>
+                    Availability
+                    <select id="filterAvailability">
+                        <option value="all">All</option>
+                        <option value="available">Available</option>
+                        <option value="unavailable">Unavailable</option>
+                    </select>
+                </label>
+
+                <button id="clearFilters" class="btn small">Clear Filter</button>
+            </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar card">
+            <h2>Add Fleet</h2>
+            <form id="fleet Form">
+                <label>Reg No of Vehicle</label>
+                <input id="regNo" required />
+
+                <label>Category</label>
+                <select id="category" required>
+                    <option value="">Select</option>
+                    <option value="auto">Auto</option>
+                    <option value="car">Car</option>
+                    <option value="truck">Truck</option>
+                    <option value="bus">Bus</option>
+                </select>
+
+                <label>Driver Name</label>
+                <input id="driver" required />
+
+                <label>Is Available</label>
+                <select id="isAvailable">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+
+                <button type="submit" class="btn">Add Fleet</button>
+            </form>
+        </aside>
+
+        <main class="main-content">
+            <h2>Fleets</h2>
+            <div id="cardsContainer" class="cards-grid"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
